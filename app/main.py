@@ -18,11 +18,11 @@ def get_weather() -> None:
         response.raise_for_status()
         weather_data = response.json()
         print(
-            f"{weather_data["location"]["name"]}/"
-            f"{weather_data["location"]["country"]} "
-            f"{weather_data["location"]["localtime"]} "
-            f"Weather: {weather_data["current"]["temp_c"]} Celsius, "
-            f"{weather_data["current"]["condition"]["text"]}")
+            f"{weather_data['location']['name']}/"
+            f"{weather_data['location']['country']} "
+            f"{weather_data['location']['localtime']} "
+            f"Weather: {weather_data['current']['temp_c']} Celsius, "
+            f"{weather_data['current']['condition']['text']}")
     except requests.RequestException as e:
         print(f"Error fetching weather data: {e}")
 
